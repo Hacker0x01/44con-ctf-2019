@@ -8,6 +8,7 @@ Installation
 
 Ensure you have Docker, docker-compose, and GNU Make installed, then clone this repo and run:
 
+	docker network create instances
 	make start
 
 Playing
