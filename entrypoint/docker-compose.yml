@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: b806024fcf9155c55f19377db0a450d7
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  entrypoint:
+    privileged: true
+    image: entrypoint
+    restart: always
+    ports:
+      - "2222:22"
+      - "2323:23"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  db-data:

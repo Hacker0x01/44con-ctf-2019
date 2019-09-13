@@ -1,0 +1,16 @@
+0 halt
+1 set global 0-255
+2 get global 0-255
+3 dup
+4 deref pointer
+5 push u64
+6 swap
+7 add
+8 sub
+9 and
+a or
+b lsl
+c lsr
+d asr
+e print
+f branch relative if nonzero
